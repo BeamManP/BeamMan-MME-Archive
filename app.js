@@ -25,9 +25,8 @@ function matches(q, ...fields) {
 
 function render() {
   const q = $("#q").value.trim().toLowerCase();
-  const only64 = $("#only64").checked;
   const hit = DATA.effects
-    .filter((e) => matches(q, e.title, e.notes, e.file, e.video_title) && (!only64 || e.env.includes("64")))
+    .filter((e) => matches(q, e.title, e.notes, e.file, e.video_title))
     .sort((a, b) => (b.date || "").localeCompare(a.date || "") || a.order - b.order);
   const list = hit.filter((e) => e.kind === "effect");
   const soft = hit.filter((e) => e.kind === "soft");
@@ -94,6 +93,6 @@ document.addEventListener("keydown", (ev) => {
   if (c && (ev.key === "Enter" || ev.key === " ")) { ev.preventDefault(); openDetail(DATA.effects[c.dataset.i]); }
 });
 $("#detail").addEventListener("close", () => { $("#d-body").innerHTML = ""; }); // 動画を止める
-["#q", "#only64"].forEach((s) => $(s).addEventListener("input", render));
+$("#q").addEventListener("input", render);
 fetch("data.json", { cache: "no-cache" }).then((r) => r.json()).then((d) => { DATA = d; render(); })
   .catch(() => { $("#count").textContent = "一覧を読み込めませんでした。ページを再読み込みしてください。"; });

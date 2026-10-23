@@ -67,7 +67,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   font: inherit; color: var(--ink); background: var(--paper);
   border: 2px solid var(--grid); border-radius: 6px; padding: 8px 12px; width: 100%;
 }
-.check { white-space: nowrap; }
 .count { color: var(--muted); font-size: .875rem; margin: 0 0 12px; }
 
 /* エフェクト一覧 */
