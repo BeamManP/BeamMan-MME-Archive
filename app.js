@@ -46,6 +46,7 @@ function cards(list) {
       ${thumbImg(e)}
       <div class="body">
         <h3>${esc(e.title)}</h3>
+        ${e.notes ? `<p class="desc">${esc(e.notes.split(" / ")[0])}</p>` : ""}
         <p class="meta">${esc(e.date)}</p>
         <div class="row">
           ${e.new ? '<span class="tag new">NEW</span>' : ""}
