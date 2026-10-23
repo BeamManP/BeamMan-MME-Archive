@@ -11,8 +11,10 @@ const stem = (name) => name.toLowerCase()
   .replace(/[_\s-]*v(er)?[_.]?[\d._]+[a-z]?$/g, "")
   .replace(/[_\s-]+$/, "");
 
+// サムネは wiki の画像 → 配布動画のサムネ → no image の順
 function thumbImg(e) {
-  if (!e.thumb) return `<div class="thumb none">${e.kind === "soft" ? "ソフトウェア" : "動画なし"}</div>`;
+  if (e.img) return `<img class="thumb" loading="lazy" alt="" src="${esc(e.img)}">`;
+  if (!e.thumb) return `<div class="thumb none">no image</div>`;
   // 新しい動画は .M（大きいサムネ）がある。無ければ元の小さいサムネへ
   return `<img class="thumb" loading="lazy" alt="" src="${esc(e.thumb)}.M" onerror="this.onerror=null;this.src='${esc(e.thumb)}'">`;
 }
