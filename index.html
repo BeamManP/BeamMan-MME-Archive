@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ビームマンのエフェクト置き場</title>
+<meta name="description" content="ビームマンPが作った MikuMikuEffect 用エフェクトの配布ページです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1>ビームマンの<br>エフェクト置き場</h1>
+    <p class="lede">私ビームマンが作った、MikuMikuEffect 用のエフェクトを配布しています。</p>
+    <p class="moved">uploader.jp のサービス終了（2026年11月25日）に合わせて、atwiki からここへ引っ越しました。旧アップローダのファイルも、旧版を含めて全部ここから落とせます。</p>
+  </div>
+  <div class="beam" aria-hidden="true"></div>
+</header>
+
+<main class="wrap">
+  <section class="tools" aria-label="絞り込み">
+    <label class="search">
+      <span class="sr">エフェクトを検索</span>
+      <input id="q" type="search" placeholder="名前・説明で検索（例: 水面、Glass、爆発）" autocomplete="off">
+    </label>
+    <label class="check"><input id="only64" type="checkbox"> 64bit 対応だけ</label>
+  </section>
+
+  <p id="count" class="count" aria-live="polite"></p>
+  <ul id="grid" class="grid"></ul>
+
+  <section class="block wide" id="soft">
+    <h2>ソフトウェア</h2>
+    <ul id="soft-grid" class="grid"></ul>
+  </section>
+
+  <section class="block" id="others">
+    <h2>その他のファイル</h2>
+    <p>wiki に載せていなかった旧版・試作版・素材などです。上の検索はここにも効きます。</p>
+    <details id="others-box">
+      <summary id="others-sum">一覧を開く</summary>
+      <div class="table-wrap"><table class="files">
+        <thead><tr><th>ファイル</th><th>コメント</th><th>日付</th><th>容量</th></tr></thead>
+        <tbody id="others-body"></tbody>
+      </table></div>
+    </details>
+  </section>
+
+  <section class="block" id="rules">
+    <h2>エフェクト利用規約（2023/11/12 更新）</h2>
+    <p>ここで配布されているエフェクトは全て、同梱の txt に特に明記が無い場合、再配布や改造等、自由に行って頂いて構いません。</p>
+    <p>また、同じく同梱 txt に特に明記が無い場合は、個人・サークルでの活動であれば商用非商用問わず、ライセンスやクレジット記載の必要もありません（クレジットしたうえで連絡してくれるとボクは嬉しいです）。</p>
+    <p>ただし、政治利用、宗教活動、法人による商用利用に関しては都度確認しますので、下記の X（旧 Twitter）の DM にご連絡ください。その他のお問い合わせも同じく DM でどうぞ。</p>
+    <ul class="links">
+      <li><a href="https://x.com/BeamManP">X（旧 Twitter）@BeamManP</a></li>
+      <li><a href="https://www.nicovideo.jp/user/421727">ニコニコ マイページ</a></li>
+    </ul>
+  </section>
+</main>
+
+<dialog id="detail" aria-labelledby="d-title">
+  <form method="dialog"><button class="close" aria-label="閉じる">×</button></form>
+  <div id="d-body"></div>
+</dialog>
+
+<footer class="wrap foot">
+  <p>ファイルは GitHub Releases に置いています。<a href="https://github.com/BeamManP/BeamMan-MME-Archive">リポジトリ</a></p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
