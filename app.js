@@ -33,6 +33,10 @@ function render() {
   const list = hit.filter((e) => e.kind === "effect");
   const soft = hit.filter((e) => e.kind === "soft");
 
+  // 新着（pin が付いた物）は検索に関係なく一番上に出す
+  const pick = DATA.effects.filter((e) => e.pin);
+  $("#pick-grid").innerHTML = cards(pick);
+  $("#pick").hidden = pick.length === 0;
   $("#grid").innerHTML = cards(list);
   $("#soft-grid").innerHTML = cards(soft);
   $("#soft").hidden = soft.length === 0;

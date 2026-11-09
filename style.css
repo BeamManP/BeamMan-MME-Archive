@@ -126,3 +126,10 @@ dialog::backdrop { background: rgb(15 18 28 / .6); }
 #d-body .video { display: block; aspect-ratio: 16 / 9; width: 100%; border: 0; border-radius: 4px; background: var(--grid); margin: 12px 0; }
 #d-body .acts { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 12px 0; }
 #d-body h3 { font-size: 1rem; margin: 20px 0 6px; }
+
+/* 新着（data.json の pin）。ページの一番上 */
+#pick { margin-bottom: 40px; }
+#pick .grid { margin-bottom: 0; }
+#pick .card { border: 2px solid var(--beam); box-shadow: 0 0 14px color-mix(in srgb, var(--beam) 35%, transparent); }
+.newmark { display: inline-block; font-size: .8125rem; font-weight: 700; color: #fff; background: var(--beam);
+  border-radius: 3px; padding: 1px 8px; margin-right: 10px; vertical-align: 3px; letter-spacing: .06em; }
