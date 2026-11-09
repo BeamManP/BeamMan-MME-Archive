@@ -133,3 +133,4 @@ dialog::backdrop { background: rgb(15 18 28 / .6); }
 #pick .card { border: 2px solid var(--beam); box-shadow: 0 0 14px color-mix(in srgb, var(--beam) 35%, transparent); }
 .newmark { display: inline-block; font-size: .8125rem; font-weight: 700; color: #fff; background: var(--beam);
   border-radius: 3px; padding: 1px 8px; margin-right: 10px; vertical-align: 3px; letter-spacing: .06em; }
+#mme .grid { margin-bottom: 0; }
