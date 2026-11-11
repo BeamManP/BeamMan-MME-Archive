@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ビームマンのエフェクト置き場</title>
+<title data-i18n="title">ビームマンのエフェクト置き場</title>
 <meta name="description" content="ビームマンPが作った MikuMikuEffect 用エフェクトの配布ページです。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,67 +13,70 @@
 <body>
 <header class="hero">
   <div class="wrap">
-    <h1>ビームマンの<br>エフェクト置き場</h1>
-    <p class="lede">私ビームマンが作った、MikuMikuEffect 用のエフェクトを配布しています。</p>
-    <p class="moved">uploader.jp のサービス終了（2026年11月25日）に合わせて、atwiki からここへ引っ越しました。旧アップローダのファイルも、旧版を含めて全部ここから落とせます。</p>
+    <nav class="lang" aria-label="Language">
+      <button type="button" data-lang="ja">日本語</button><button type="button" data-lang="en">English</button>
+    </nav>
+    <h1 data-i18n-html="h1">ビームマンの<br>エフェクト置き場</h1>
+    <p class="lede" data-i18n="lede">私ビームマンが作った、MikuMikuEffect 用のエフェクトを配布しています。</p>
+    <p class="moved" data-i18n="moved">uploader.jp のサービス終了（2026年11月25日）に合わせて、atwiki からここへ引っ越しました。旧アップローダのファイルも、旧版を含めて全部ここから落とせます。</p>
   </div>
   <div class="beam" aria-hidden="true"></div>
 </header>
 
 <main class="wrap">
   <section class="block wide" id="pick" hidden>
-    <h2><span class="newmark">NEW</span>新着</h2>
+    <h2><span class="newmark">NEW</span><span data-i18n="pick">新着</span></h2>
     <ul id="pick-grid" class="grid"></ul>
   </section>
 
-  <section class="tools" aria-label="絞り込み">
+  <section class="tools" aria-label="絞り込み" data-i18n-aria="tools">
     <label class="search">
-      <span class="sr">エフェクトを検索</span>
-      <input id="q" type="search" placeholder="名前・説明で検索（例: 水面、Glass、爆発）" autocomplete="off">
+      <span class="sr" data-i18n="search">エフェクトを検索</span>
+      <input id="q" type="search" placeholder="名前・説明で検索（例: 水面、Glass、爆発）" data-i18n-placeholder="q" autocomplete="off">
     </label>  </section>
 
   <section class="block wide" id="soft">
-    <h2>ソフトウェア</h2>
+    <h2 data-i18n="soft">ソフトウェア</h2>
     <ul id="soft-grid" class="grid"></ul>
   </section>
 
   <section class="block wide" id="mme">
-    <h2>MME エフェクト</h2>
+    <h2 data-i18n="mme">MME エフェクト</h2>
     <p id="count" class="count" aria-live="polite"></p>
     <ul id="grid" class="grid"></ul>
   </section>
 
   <section class="block" id="others">
-    <h2>その他のファイル</h2>
-    <p>wiki に載せていなかった旧版・試作版・素材などです。上の検索はここにも効きます。</p>
+    <h2 data-i18n="others">その他のファイル</h2>
+    <p data-i18n="others_p">wiki に載せていなかった旧版・試作版・素材などです。上の検索はここにも効きます。</p>
     <details id="others-box">
       <summary id="others-sum">一覧を開く</summary>
       <div class="table-wrap"><table class="files">
-        <thead><tr><th>ファイル</th><th>コメント</th><th>日付</th><th>容量</th></tr></thead>
+        <thead><tr><th data-i18n="th_file">ファイル</th><th data-i18n="th_comment">コメント</th><th data-i18n="th_date">日付</th><th data-i18n="th_size">容量</th></tr></thead>
         <tbody id="others-body"></tbody>
       </table></div>
     </details>
   </section>
 
   <section class="block" id="rules">
-    <h2>エフェクト利用規約（2023/11/12 更新）</h2>
-    <p>ここで配布されているエフェクトは全て、同梱の txt に特に明記が無い場合、再配布や改造等、自由に行って頂いて構いません。</p>
-    <p>また、同じく同梱 txt に特に明記が無い場合は、個人・サークルでの活動であれば商用非商用問わず、ライセンスやクレジット記載の必要もありません（クレジットしたうえで連絡してくれるとボクは嬉しいです）。</p>
-    <p>ただし、政治利用、宗教活動、法人による商用利用に関しては都度確認しますので、下記の X（旧 Twitter）の DM にご連絡ください。その他のお問い合わせも同じく DM でどうぞ。</p>
+    <h2 data-i18n="rules">エフェクト利用規約（2023/11/12 更新）</h2>
+    <p data-i18n="rules1">ここで配布されているエフェクトは全て、同梱の txt に特に明記が無い場合、再配布や改造等、自由に行って頂いて構いません。</p>
+    <p data-i18n="rules2">また、同じく同梱 txt に特に明記が無い場合は、個人・サークルでの活動であれば商用非商用問わず、ライセンスやクレジット記載の必要もありません（クレジットしたうえで連絡してくれるとボクは嬉しいです）。</p>
+    <p data-i18n="rules3">ただし、政治利用、宗教活動、法人による商用利用に関しては都度確認しますので、下記の X（旧 Twitter）の DM にご連絡ください。その他のお問い合わせも同じく DM でどうぞ。</p>
     <ul class="links">
-      <li><a href="https://x.com/BeamManP">X（旧 Twitter）@BeamManP</a></li>
-      <li><a href="https://www.nicovideo.jp/user/421727">ニコニコ マイページ</a></li>
+      <li><a href="https://x.com/BeamManP" data-i18n="x">X（旧 Twitter）@BeamManP</a></li>
+      <li><a href="https://www.nicovideo.jp/user/421727" data-i18n="nico">ニコニコ マイページ</a></li>
     </ul>
   </section>
 </main>
 
 <dialog id="detail" aria-labelledby="d-title">
-  <form method="dialog"><button class="close" aria-label="閉じる">×</button></form>
+  <form method="dialog"><button class="close" aria-label="閉じる" data-i18n-aria="close">×</button></form>
   <div id="d-body"></div>
 </dialog>
 
 <footer class="wrap foot">
-  <p>ファイルは GitHub Releases に置いています。<a href="https://github.com/BeamManP/BeamMan-MME-Archive">リポジトリ</a></p>
+  <p><span data-i18n="foot">ファイルは GitHub Releases に置いています。</span><a href="https://github.com/BeamManP/BeamMan-MME-Archive" data-i18n="repo">リポジトリ</a></p>
 </footer>
 <script src="app.js"></script>
 </body>
